@@ -167,7 +167,7 @@
                 <div class="space-y-6 animate-slide-left">
                     <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full shadow-sm">
                         <div class="w-2 h-2 bg-emerald-600 rounded-full animate-pulse-slow"></div>
-                        <span class="text-emerald-800 text-xs sm:text-sm font-bold">Launching Soon in Abuja 🚀</span>
+                        <span class="text-emerald-800 text-xs sm:text-sm font-bold">Launching Soon in Abuja</span>
                     </div>
                    
                     <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-tight">
@@ -304,6 +304,211 @@
                                 By joining, you agree to our <a href="#" class="text-emerald-600 hover:text-emerald-700 underline font-medium">Terms</a> & <a href="#" class="text-emerald-600 hover:text-emerald-700 underline font-medium">Privacy Policy</a>
                             </p>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Vibe Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left - Real Google Map with Animated Bike -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl p-8 relative overflow-hidden shadow-xl">
+                        <!-- Google Map Container -->
+                        <div class="relative h-96 rounded-2xl overflow-hidden bg-gray-100">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126093.89344296056!2d7.398370599999999!3d9.0579455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sAbuja%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng"
+                                width="100%"
+                                height="100%"
+                                style="border:0; filter: grayscale(20%) contrast(1.1);"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            
+                            <!-- Overlay Route Path -->
+                            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 400" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="routeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
+                                        <stop offset="100%" style="stop-color:#059669;stop-opacity:0.8" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 80 320 Q 150 250 200 200 T 320 80" 
+                                      stroke="url(#routeGradient)" 
+                                      stroke-width="5" 
+                                      fill="none" 
+                                      stroke-dasharray="10,5"
+                                      opacity="0.9"/>
+                            </svg>
+                            
+                            <!-- Location Markers -->
+                            <div class="absolute" style="top: 20%; left: 20%;">
+                                <div class="relative">
+                                    <div class="bg-emerald-600 rounded-full p-3 shadow-xl animate-pulse">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-white px-2 py-1 rounded shadow-lg text-xs font-semibold text-gray-800">
+                                        Pickup
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="absolute" style="bottom: 20%; right: 20%;">
+                                <div class="relative">
+                                    <div class="bg-red-600 rounded-full p-3 shadow-xl animate-pulse" style="animation-delay: 0.5s;">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-white px-2 py-1 rounded shadow-lg text-xs font-semibold text-gray-800">
+                                        Destination
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Animated Delivery Bike -->
+                            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                                <div class="bike-container">
+                                    <svg class="w-24 h-24 drop-shadow-xl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Bike Body -->
+                                        <g class="bike-shake">
+                                            <!-- Shadow -->
+                                            <ellipse cx="47" cy="85" rx="35" ry="5" fill="black" opacity="0.2"/>
+                                            
+                                            <!-- Back Wheel -->
+                                            <circle cx="25" cy="70" r="12" fill="none" stroke="#1f2937" stroke-width="2.5">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 25 70" to="360 25 70" dur="0.8s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle cx="25" cy="70" r="8" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+                                            <circle cx="25" cy="70" r="3" fill="#1f2937"/>
+                                            
+                                            <!-- Front Wheel -->
+                                            <circle cx="70" cy="70" r="12" fill="none" stroke="#1f2937" stroke-width="2.5">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 70 70" to="360 70 70" dur="0.8s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle cx="70" cy="70" r="8" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+                                            <circle cx="70" cy="70" r="3" fill="#1f2937"/>
+                                            
+                                            <!-- Frame -->
+                                            <path d="M 25 70 L 40 50 L 55 50 L 70 70" stroke="#059669" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M 40 50 L 40 65" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+                                            <path d="M 55 50 L 62 38 L 68 50" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                            
+                                            <!-- Seat -->
+                                            <ellipse cx="42" cy="48" rx="8" ry="3" fill="#1f2937"/>
+                                            
+                                            <!-- Handlebars -->
+                                            <path d="M 68 50 L 70 45 M 68 50 L 66 45" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+                                            
+                                            <!-- Delivery Box (Big and Prominent) -->
+                                            <rect x="26" y="30" width="22" height="18" rx="2" fill="#10b981" stroke="#047857" stroke-width="2"/>
+                                            <line x1="32" y1="34" x2="42" y2="34" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                            <line x1="32" y1="38" x2="42" y2="38" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                            <line x1="32" y1="42" x2="42" y2="42" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                            
+                                            <!-- Rider Helmet -->
+                                            <ellipse cx="50" cy="32" rx="7" ry="6" fill="#fbbf24"/>
+                                            <path d="M 47 32 Q 50 29 53 32" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+                                            
+                                            <!-- Rider Head/Face -->
+                                            <circle cx="50" cy="35" r="5" fill="#fde68a"/>
+                                            <circle cx="48" cy="34" r="1" fill="#1f2937"/>
+                                            <circle cx="52" cy="34" r="1" fill="#1f2937"/>
+                                            <path d="M 48 37 Q 50 38 52 37" fill="none" stroke="#1f2937" stroke-width="0.5"/>
+                                            
+                                            <!-- Rider Body -->
+                                            <path d="M 50 40 L 50 52 L 45 62" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M 50 40 L 50 52 L 55 62" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+                                            
+                                            <!-- Rider Arms -->
+                                            <path d="M 50 43 L 62 48" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+                                            <circle cx="62" cy="48" r="2" fill="#fde68a"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating Tracking Info -->
+                            <div class="absolute top-4 right-4 bg-white rounded-xl shadow-2xl p-4 animate-float border-2 border-emerald-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-7 h-7 text-emerald-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500 font-semibold">En Route</div>
+                                        <div class="text-lg font-black text-emerald-600">5 mins away</div>
+                                        <div class="text-xs text-gray-400">Maitama, Abuja</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-200 rounded-full blur-3xl opacity-50"></div>
+                        <div class="absolute -top-4 -right-4 w-32 h-32 bg-green-200 rounded-full blur-3xl opacity-50"></div>
+                    </div>
+                </div>
+                
+                <!-- Right - Content -->
+                <div class="space-y-6">
+                    <div class="inline-block px-4 py-2 bg-emerald-100 rounded-full shadow-sm">
+                        <span class="text-emerald-800 text-sm font-bold">🚀 LIGHTNING FAST DELIVERY</span>
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
+                        Track Every Mile,<br>
+                        <span class="text-emerald-600">Every Minute</span>
+                    </h2>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Watch your package move in real-time across Abuja with our advanced GPS tracking. From pickup to doorstep, you're always in control.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Live GPS Tracking</h3>
+                                <p class="text-gray-600 text-sm">See your rider's exact location updated every 10 seconds</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Instant Notifications</h3>
+                                <p class="text-gray-600 text-sm">Get updates at every milestone - picked up, in transit, delivered</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">ETA Accuracy</h3>
+                                <p class="text-gray-600 text-sm">AI-powered time estimates that account for traffic and routes</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,7 +657,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2025 LOGISTIK. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">© 2024 LOGISTIK. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -508,4 +713,3 @@
     </script>
 </body>
 </html>
-
